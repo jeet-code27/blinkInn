@@ -82,10 +82,10 @@ const Footer = () => {
             <nav className="space-y-6">
               {[
                 { name: 'Home', path: '/' },
-                { name: 'About', path: '/about' },
-                { name: 'Rooms', path: '/rooms' },
-                { name: 'Blog', path: '/blog' },
-                { name: 'Contact', path: '/contact' }
+                { name: 'About', path: '/about-us' },
+                { name: 'Rooms', path: '/' },
+                { name: 'Blog', path: '/' },
+                { name: 'Contact', path: '/' }
               ].map((page) => (
                 <Link
                   key={page.name}
