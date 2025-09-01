@@ -31,7 +31,7 @@ const Navbar = () => {
           <div className="flex-1 flex justify-center lg:flex-none">
             <div className="text-center cursor-pointer">
               <div className="text-3xl font-serif text-gray-800 tracking-wide">
-                 BlinkInn
+                 Blink Inn
               </div>
               <div className="flex justify-center mt-1">
                 <svg width="120" height="8" viewBox="0 0 120 8" className="text-gray-400">
@@ -54,13 +54,13 @@ const Navbar = () => {
 
           {/* Right Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            <a href="#" className="text-gray-700 hover:text-gray-900 font-medium transition-colors duration-200 cursor-pointer">
-              Pages
+            <a href="/gallery" className="text-gray-700 hover:text-gray-900 font-medium transition-colors duration-200 cursor-pointer">
+              Gallery 
             </a>
             <a href="#" className="text-gray-700 hover:text-gray-900 font-medium transition-colors duration-200 cursor-pointer">
               Blog
             </a>
-            <a href="#" className="text-gray-700 hover:text-gray-900 font-medium transition-colors duration-200 cursor-pointer">
+            <a href="/contact-us" className="text-gray-700 hover:text-gray-900 font-medium transition-colors duration-200 cursor-pointer">
               Contact
             </a>
           </div>
@@ -93,8 +93,8 @@ const Navbar = () => {
               <a href="#" className="block px-3 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-md font-medium cursor-pointer">
                 Rooms
               </a>
-              <a href="#" className="block px-3 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-md font-medium cursor-pointer">
-                Pages
+              <a href="/gallery" className="block px-3 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-md font-medium cursor-pointer">
+                Gallery
               </a>
               <a href="#" className="block px-3 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-md font-medium cursor-pointer">
                 Blog

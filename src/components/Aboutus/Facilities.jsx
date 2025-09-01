@@ -104,7 +104,7 @@ const Facilities = () => {
             className="text-4xl sm:text-5xl lg:text-6xl text-white font-normal"
             style={{ fontFamily: 'Butler, Georgia, serif' }}
           >
-            Why Choose Luxorefi
+            Why Choose Blink Inn
           </h2>
         </div>
 

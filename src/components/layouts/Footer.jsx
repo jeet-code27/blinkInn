@@ -42,7 +42,7 @@ const Footer = () => {
             <div className="flex items-center space-x-4">
               <Link href="/" className="flex items-center space-x-4 group">
                 <h2 className="text-3xl font-bold tracking-wider text-white drop-shadow-lg group-hover:text-blue-200 transition-colors duration-300">
-                  BlinkInn
+                  Blink Inn
                 </h2>
               </Link>
             </div>
