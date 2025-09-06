@@ -9,17 +9,17 @@ const LuxuryHotelCards = () => {
   const hotelCards = [
     {
       id: 1,
-      image: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=800&q=80",
+      image: "/images/room.jpg",
       delay: 0.2
     },
     {
       id: 2,
-      image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=800&q=80",
+      image: "/images/room3.jpg",
       delay: 0.4
     },
     {
       id: 3,
-      image: "https://images.unsplash.com/photo-1566665797739-1674de7a421a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=800&q=80",
+      image: "/images/room0.jpg",
       delay: 0.6
     }
   ];
@@ -65,12 +65,12 @@ const LuxuryHotelCards = () => {
         </div>
 
         {/* Cards Container - Responsive fanned overlapping layout */}
-        <div className="flex items-center justify-center perspective-[1000px] md:pl-64 pl-10">
-          <div className="relative w-full max-w-5xl h-64 sm:h-80 md:h-96 lg:h-[420px] xl:h-[480px] flex items-center justify-center">
+        <div className="flex items-center justify-center perspective-[1000px] md:pl-64 pl-[6vw]">
+          <div className="relative w-full max-w-5xl  h-64 sm:h-80 md:h-96 lg:h-[420px] xl:h-[480px] flex items-center justify-center">
             {hotelCards.map((card, index) => (
               <div
                 key={card.id}
-                className={`absolute w-44 sm:w-56 md:w-64 lg:w-72 xl:w-80 h-56 sm:h-72 md:h-80 lg:h-96 xl:h-[400px] transition-all duration-1000 ease-out transform-gpu ${
+                className={`absolute   w-38 sm:w-56 md:w-64 lg:w-72 xl:w-80 h-50 sm:h-72 md:h-80 lg:h-96 xl:h-[400px] transition-all duration-1000 ease-out transform-gpu ${
                   cardAnimations[index] 
                     ? getCardFinalPosition(index)
                     : 'translate-x-0 translate-y-0 rotate-0 scale-100'

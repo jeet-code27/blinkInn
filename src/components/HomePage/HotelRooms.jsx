@@ -1,6 +1,7 @@
 'use client';
 import React, { useState, useRef, useCallback } from 'react';
 import { ArrowRight, Move3D, Bed, Users } from 'lucide-react';
+import Link from 'next/link';
 
 const HotelRooms = () => {
   const [hoveredRoom, setHoveredRoom] = useState(null);
@@ -15,7 +16,8 @@ const HotelRooms = () => {
       size: "90 Sq Ft",
       beds: "1 Bed",
       sleeps: "3 Sleeps",
-      image: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+      image: "/images/room.jpg",
+      slug: 'room1'
     },
     {
       id: 2,
@@ -24,7 +26,8 @@ const HotelRooms = () => {
       size: "60 Sq Ft",
       beds: "2 Beds",
       sleeps: "4 Sleeps",
-      image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+      image: "/images/room2.jpg",
+      slug: 'room2'
     },
     {
       id: 3,
@@ -33,7 +36,8 @@ const HotelRooms = () => {
       size: "70 Sq Ft",
       beds: "1 Bed",
       sleeps: "2 Sleeps",
-      image: "https://images.unsplash.com/photo-1566665797739-1674de7a421a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80"
+      image: "/images/room3.jpg",
+      slug: 'room3'
     },
     {
       id: 4,
@@ -42,7 +46,8 @@ const HotelRooms = () => {
       size: "50 Sq Ft",
       beds: "1 Bed",
       sleeps: "3 Sleeps",
-      image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+      image: "/images/room5.jpg",
+      slug: 'room4'
     }
   ];
 
@@ -82,6 +87,7 @@ const HotelRooms = () => {
         
         {/* Desktop Button - Original perfect alignment */}
         <div className="hidden sm:flex justify-end">
+          <Link href="/rooms">
           <button className="group cursor-pointer flex items-center bg-white hover:bg-[#C8A882] border border-gray-300 rounded-lg hover:shadow-md transition-all duration-300 p-1">
             <span className="text-black font-medium text-base px-5 py-2">
               View All Rooms
@@ -90,6 +96,7 @@ const HotelRooms = () => {
               <ArrowRight className="w-4 h-4 text-black transition-transform duration-300 group-hover:translate-x-1" />
             </div>
           </button>
+          </Link>
         </div>
       </div>
 
@@ -106,6 +113,7 @@ const HotelRooms = () => {
               onMouseLeave={() => setHoveredRoom(null)}
             >
               {/* Background Image with Zoom Effect */}
+              <Link href={`/room${room.id}`}>
               <div 
                 className="absolute inset-0 bg-cover bg-center transition-all duration-700 group-hover:scale-110"
                 style={{
@@ -118,7 +126,7 @@ const HotelRooms = () => {
                 {/* Gradient Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500"></div>
               </div>
-
+              </Link>
               {/* Floating View Button - Hidden on mobile for better UX */}
               <div 
                 className="view-button absolute pointer-events-none z-20 transition-all duration-200 opacity-0 group-hover:opacity-100 hidden sm:block"

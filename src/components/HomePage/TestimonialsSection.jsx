@@ -84,7 +84,7 @@ const testimonials = [
             (TESTIMONIALS)
           </p>
           <h2 className="text-5xl text-gray-900 leading-tight" style={{ fontFamily: 'Butler, Georgia, serif' }}>
-            What Your Customers Say
+            What Our Customers Say
           </h2>
         </div>
 
@@ -92,13 +92,13 @@ const testimonials = [
           
           {/* Left Side - Hotel Image */}
           <div className="relative">
-            <div className="rounded-l-2xl overflow-hidden shadow-2xl">
+            <div className=" rounded-l-2xl overflow-hidden shadow-2xl">
               <Image
-                src="/images/herofirst.jpg" // Dummy path
+                src="/images/girl4.jpg" // Dummy path
                 alt="Luxury Hotel Room"
                 width={600}
                 height={600}
-                className="object-cover w-full h-[700px]"
+                className="object-cover w-full h-[400px] lg:h-[700px]"
               />
             </div>
           </div>

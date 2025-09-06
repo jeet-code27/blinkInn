@@ -84,7 +84,7 @@ const Footer = () => {
                 { name: 'Home', path: '/' },
                 { name: 'About', path: '/about-us' },
                 { name: 'Rooms', path: '/' },
-                { name: 'Blog', path: '/' },
+                { name: 'Blog', path: '/blogs' },
                 { name: 'Contact', path: '/' }
               ].map((page) => (
                 <Link
@@ -100,24 +100,13 @@ const Footer = () => {
           
           {/* CMS Pages Section */}
           <div className="space-y-8">
-            <h3 className="text-2xl font-bold mb-10 tracking-wider text-white drop-shadow-lg">Services</h3>
-            <nav className="space-y-6">
-              {[
-                { name: 'Room Service', path: '/services/room-service' },
-                { name: 'Spa & Wellness', path: '/services/spa' },
-                { name: 'Restaurant', path: '/services/restaurant' },
-                { name: 'Events', path: '/services/events' },
-                { name: 'Business Center', path: '/services/business' }
-              ].map((page) => (
-                <Link
-                  key={page.name}
-                  href={page.path}
-                  className="block text-blue-100 hover:text-white transition-all duration-300 text-lg hover:translate-x-2 drop-shadow-sm hover:drop-shadow-md"
-                >
-                  {page.name}
-                </Link>
-              ))}
-            </nav>
+            <h3 className="text-2xl font-bold mb-10 tracking-wider text-white drop-shadow-lg">Address</h3>
+            <div className="space-y-4 text-blue-100 text-lg leading-relaxed">
+              <p className="drop-shadow-sm">C-1, Ajmer Rd, opposite to Diamond Tower, Purani Chungi, Panchsheel Colony, Vidhyut Nagar, </p>
+              <p className="drop-shadow-sm">Jaipur, Rajasthan 302021, India</p>
+              <p className="drop-shadow-sm">Phone:+911416763132</p>
+              <p className="drop-shadow-sm">Email: info@blinkinn.com</p>
+              </div>
           </div>
         </div>
         

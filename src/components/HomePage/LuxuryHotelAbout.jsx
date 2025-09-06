@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowUpRight } from 'lucide-react';
+import Link from 'next/link';
 
 const LuxuryHotelAbout = () => {
   return (
@@ -11,7 +12,7 @@ const LuxuryHotelAbout = () => {
           <div className="relative order-2 lg:order-1">
             <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl shadow-2xl aspect-[4/5] sm:aspect-[3/4] lg:aspect-[4/5]">
               <img
-                src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                src="/images/IMG-20250906-WA0019.jpg"
                 alt="Luxury Hotel Interior"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
               />
@@ -20,7 +21,7 @@ const LuxuryHotelAbout = () => {
             </div>
             
             {/* Decorative element */}
-            <div className="absolute -top-4 -right-4 w-16 h-16 sm:w-20 sm:h-20 bg-amber-400/30 rounded-full blur-xl"></div>
+            {/* <div className="absolute -top-4 -right-4 w-16 h-16 sm:w-20 sm:h-20 bg-amber-400/30 rounded-full blur-xl"></div> */}
             <div className="absolute -bottom-6 -left-6 w-12 h-12 sm:w-16 sm:h-16 bg-stone-400/20 rounded-full blur-lg"></div>
           </div>
 
@@ -66,7 +67,9 @@ const LuxuryHotelAbout = () => {
             <div className="pt-2 sm:pt-4">
               <button className="group inline-flex items-center gap-3 bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-500 hover:to-amber-600 text-stone-900 font-medium px-6 sm:px-8 py-3 sm:py-4 rounded-2xl transition-all duration-300 hover:shadow-lg hover:shadow-amber-500/25 transform hover:-translate-y-1">
                 <span style={{fontFamily: 'Arial, sans-serif'}} className="text-sm sm:text-base">
-                  More About
+                  <Link href="/about-us">
+                    More About
+                  </Link>
                 </span>
                 <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
               </button>

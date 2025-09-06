@@ -1,6 +1,8 @@
-'use client';
-import React, { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+"use client";
+import React, { useState } from "react";
+import Link from "next/link";
+import { Menu, X } from "lucide-react";
+import Image from "next/image";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -12,57 +14,64 @@ const Navbar = () => {
   return (
     <nav className="bg-[#FDF7F3] shadow-sm border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
-          
+        <div className="flex justify-between items-center h-40 text-2xl ">
           {/* Left Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
-            <a href="/" className="text-gray-700 hover:text-gray-900 font-medium transition-colors duration-200 cursor-pointer">
+          <div className="hidden lg:flex items-center space-x-25">
+            <Link
+              href="/"
+              className="text-gray-700 hover:text-gray-900  transition-colors duration-200 cursor-pointer font-bold"
+            >
               Home
-            </a>
-            <a href="/about-us" className="text-gray-700 hover:text-gray-900 font-medium transition-colors duration-200 cursor-pointer">
+            </Link>
+            <Link
+              href="/about-us"
+              className="text-gray-700 hover:text-gray-900 font-bold transition-colors duration-200 cursor-pointer"
+            >
               About
-            </a>
-            <a href="#" className="text-gray-700 hover:text-gray-900 font-medium transition-colors duration-200 cursor-pointer">
+            </Link>
+            <Link
+              href="/rooms"
+              className="text-gray-700 hover:text-gray-900 font-bold transition-colors duration-200 cursor-pointer"
+            >
               Rooms
-            </a>
+            </Link>
           </div>
 
           {/* Logo */}
-          <div className="flex-1 flex justify-center lg:flex-none">
-            <div className="text-center cursor-pointer">
-              <div className="text-3xl font-serif text-gray-800 tracking-wide">
-                 Blink Inn
-              </div>
-              <div className="flex justify-center mt-1">
-                <svg width="120" height="8" viewBox="0 0 120 8" className="text-gray-400">
-                  {/* Decorative flourish */}
-                  <path 
-                    d="M10 4 Q20 1 30 4 Q40 7 50 4 Q60 1 70 4 Q80 7 90 4 Q100 1 110 4" 
-                    stroke="currentColor" 
-                    strokeWidth="1" 
-                    fill="none"
-                  />
-                  <circle cx="15" cy="4" r="1.5" fill="currentColor" />
-                  <circle cx="35" cy="4" r="1.5" fill="currentColor" />
-                  <circle cx="60" cy="4" r="2" fill="currentColor" />
-                  <circle cx="85" cy="4" r="1.5" fill="currentColor" />
-                  <circle cx="105" cy="4" r="1.5" fill="currentColor" />
-                </svg>
-              </div>
+          <div className="flex-1  flex ml-2 justify-right lg:flex-none">
+            <div className="flex items-center justify-center">
+              <Link href="/">
+                <Image
+                  src="/images/logo-removebg-preview.png"
+                  alt="Blink Inn Logo"
+                  width={100} // Set a fixed width for the logo
+                  height={35} // Adjust height to maintain aspect ratio
+                  className="w-24 h-auto sm:w-32 sm:h-auto" // Responsive sizing
+                />
+              </Link>
             </div>
           </div>
 
           {/* Right Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
-            <a href="/gallery" className="text-gray-700 hover:text-gray-900 font-medium transition-colors duration-200 cursor-pointer">
-              Gallery 
-            </a>
-            <a href="#" className="text-gray-700 hover:text-gray-900 font-medium transition-colors duration-200 cursor-pointer">
+          <div className="hidden lg:flex items-center space-x-25">
+            <Link
+              href="/gallery"
+              className="text-gray-700 hover:text-gray-900 font-bold transition-colors duration-200 cursor-pointer"
+            >
+              Gallery
+            </Link>
+            <Link
+              href="/blogs"
+              className="text-gray-700 hover:text-gray-900 font-bold transition-colors duration-200 cursor-pointer"
+            >
               Blog
-            </a>
-            <a href="/contact-us" className="text-gray-700 hover:text-gray-900 font-medium transition-colors duration-200 cursor-pointer">
+            </Link>
+            <Link
+              href="/contact-us"
+              className="text-gray-700 hover:text-gray-900 font-bold transition-colors duration-200 cursor-pointer"
+            >
               Contact
-            </a>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -84,24 +93,42 @@ const Navbar = () => {
         {isMobileMenuOpen && (
           <div className="lg:hidden border-t border-gray-100">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-white">
-              <a href="/" className="block px-3 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-md font-medium cursor-pointer">
+              <Link
+                href="/"
+                className="block px-3 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-md font-medium cursor-pointer"
+              >
                 Home
-              </a>
-              <a href="/about-us" className="block px-3 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-md font-medium cursor-pointer">
+              </Link>
+              <Link
+                href="/about-us"
+                className="block px-3 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-md font-medium cursor-pointer"
+              >
                 About
-              </a>
-              <a href="#" className="block px-3 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-md font-medium cursor-pointer">
+              </Link>
+              <Link
+                href="/rooms"
+                className="block px-3 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-md font-medium cursor-pointer"
+              >
                 Rooms
-              </a>
-              <a href="/gallery" className="block px-3 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-md font-medium cursor-pointer">
+              </Link>
+              <Link
+                href="/gallery"
+                className="block px-3 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-md font-medium cursor-pointer"
+              >
                 Gallery
-              </a>
-              <a href="#" className="block px-3 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-md font-medium cursor-pointer">
+              </Link>
+              <Link
+                href="/blogs"
+                className="block px-3 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-md font-medium cursor-pointer"
+              >
                 Blog
-              </a>
-              <a href="#" className="block px-3 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-md font-medium cursor-pointer">
+              </Link>
+              <Link
+                href="/contact-us"
+                className="block px-3 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-md font-medium cursor-pointer"
+              >
                 Contact
-              </a>
+              </Link>
             </div>
           </div>
         )}
